@@ -47,15 +47,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvOstaloJedan = new System.Windows.Forms.DataGridView();
+            this.dgvTriJedan = new System.Windows.Forms.DataGridView();
             this.cmbPrijavljeniPrikaz = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnPrikazi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviTri)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviOstalo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOstaloJedan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTriJedan)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -176,6 +176,8 @@
             this.cmbPrijavljeniKorisnici.Name = "cmbPrijavljeniKorisnici";
             this.cmbPrijavljeniKorisnici.Size = new System.Drawing.Size(340, 28);
             this.cmbPrijavljeniKorisnici.TabIndex = 19;
+            this.cmbPrijavljeniKorisnici.DropDown += new System.EventHandler(this.cmbPrijavljeniKorisnici_DropDown);
+            this.cmbPrijavljeniKorisnici.DropDownClosed += new System.EventHandler(this.cmbPrijavljeniKorisnici_DropDownClosed);
             // 
             // dgvSviTri
             // 
@@ -231,23 +233,23 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Poslednje 2 poruke od svih korisnika";
             // 
-            // dataGridView1
+            // dgvOstaloJedan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(605, 633);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(546, 150);
-            this.dataGridView1.TabIndex = 25;
+            this.dgvOstaloJedan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOstaloJedan.Location = new System.Drawing.Point(605, 633);
+            this.dgvOstaloJedan.Name = "dgvOstaloJedan";
+            this.dgvOstaloJedan.RowTemplate.Height = 28;
+            this.dgvOstaloJedan.Size = new System.Drawing.Size(546, 150);
+            this.dgvOstaloJedan.TabIndex = 25;
             // 
-            // dataGridView2
+            // dgvTriJedan
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(26, 633);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(544, 150);
-            this.dataGridView2.TabIndex = 24;
+            this.dgvTriJedan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTriJedan.Location = new System.Drawing.Point(26, 633);
+            this.dgvTriJedan.Name = "dgvTriJedan";
+            this.dgvTriJedan.RowTemplate.Height = 28;
+            this.dgvTriJedan.Size = new System.Drawing.Size(544, 150);
+            this.dgvTriJedan.TabIndex = 24;
             // 
             // cmbPrijavljeniPrikaz
             // 
@@ -274,6 +276,7 @@
             this.btnPrikazi.TabIndex = 30;
             this.btnPrikazi.Text = "Prikazi";
             this.btnPrikazi.UseVisualStyleBackColor = true;
+            this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
             // 
             // FrmKlijent
             // 
@@ -285,8 +288,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgvOstaloJedan);
+            this.Controls.Add(this.dgvTriJedan);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvSviOstalo);
@@ -308,8 +311,8 @@
             this.Text = "Klijent";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviTri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSviOstalo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOstaloJedan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTriJedan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,8 +339,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvOstaloJedan;
+        private System.Windows.Forms.DataGridView dgvTriJedan;
         private System.Windows.Forms.ComboBox cmbPrijavljeniPrikaz;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnPrikazi;

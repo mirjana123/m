@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="PomocnaKlasa.cs" />
     <Compile Include="Korisnik.cs" />
+    <Compile Include="PoslateJednom.cs" />
     <Compile Include="PoslatePoruke.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

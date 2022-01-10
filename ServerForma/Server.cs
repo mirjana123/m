@@ -45,7 +45,21 @@ namespace ServerForma
 
         }
 
-      
+        internal static void SlanjePorukeJednom(string tekstPoruke, Korisnik korisnik, Korisnik posebanPrimalacPoruke)
+        {
+            PoslatePoruke pp = new PoslatePoruke();
+            if (tekstPoruke.Length > 20)
+            {
+                pp.DeoTekstaPoruke = tekstPoruke.Substring(0, 20);
+            }
+            else
+            {
+                pp.DeoTekstaPoruke = tekstPoruke;
+            }
+            pp.Salje = korisnik;
+            pp.Prima = posebanPrimalacPoruke;
+            listaPoslatihPoruka.Add(pp);
+        }
 
         void Osluskuj()
         {

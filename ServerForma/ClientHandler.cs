@@ -47,7 +47,7 @@ namespace ServerForma
 
                             break;
                         case Operacije.SlanjePorukeJednom:
-                           // SlanjePorukeJednom(zahtev);
+                            Server.SlanjePorukeJednom(zahtev.TekstPoruke, zahtev.Korisnik, zahtev.PosebanPrimalacPoruke);
 
                             break;
                         case Operacije.Kraj:
